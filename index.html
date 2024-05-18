@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp / Telegram Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp / Telegram Chat</h1>
+        <form id="phone-form" autocomplete="off">
+            <div class="phone-input-container">
+                <select id="country-code" name="country-code" required>
+                    <optgroup label="I">
+                        <option value="+62" selected>Indonesia (+62)</option>
+                        <option value="+98">Iran (+98)</option>
+                    </optgroup>
+                    <optgroup label="J">
+                        <option value="+81">Japan (+81)</option>
+                    </optgroup>
+                </select>
+                <input type="text" id="phone-number" name="phone-number" placeholder="123-1234-1234" required autocomplete="off">
+            </div>
+            <button id="submit-button" type="submit">Buat Link</button>
+        </form>
+        <div id="result" style="display:none;">
+            <a id="whatsapp-link" class="link-button" href="#" target="_blank">Open WhatsApp Chat</a>
+            <a id="telegram-link" class="link-button" href="#" target="_blank">Open Telegram Chat</a>
+        </div>
+        <div class="footer">
+            Made with ❤️ by <a href="https://instagram.com/JeffYolo" target="_blank">Jeff</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
