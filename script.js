@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('countries.json')
+      .then(response => response.json())
+      .then(data => populateCountryCodes(data))
+      .catch(error => console.error('Error loading country codes:', error));
+});
+
+function populateCountryCodes(data) {
+  const countryCodeSelect = document.getElementById('country-code');
+  for (const group in data) {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = group;
+      data[group].forEach(country => {
+          const option = document.createElement('option');
+          option.value = country.code;
+          option.textContent = country.name;
+          if (country.default) {
+            option.selected = true;
+        }
+          optgroup.appendChild(option);
+      });
+      countryCodeSelect.appendChild(optgroup);
+  }
+}
+
 document.getElementById('phone-form').addEventListener('submit', function(event) {
   event.preventDefault();
   
