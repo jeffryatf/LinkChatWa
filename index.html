@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp / Telegram Chat</title>
+    <title>Instant Link Chat Wa</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <!-- Your content here -->
     <div class="container">
-        <h1>WhatsApp / Telegram Chat</h1>
+        <h1>Instant Link Chat WhatsApp / Telegram</h1>
         <form id="phone-form" autocomplete="off">
             <div class="phone-input-container">
                 <select id="country-code" name="country-code" required></select>
@@ -18,13 +21,19 @@
             <button id="submit-button" type="submit">Buat Link</button>
         </form>
         <div id="result" style="display:none;">
-            <a id="whatsapp-link" class="link-button" href="#" target="_blank">Open WhatsApp Chat</a>
-            <a id="telegram-link" class="link-button" href="#" target="_blank">Open Telegram Chat</a>
+            <a id="whatsapp-link" class="link-button" href="#" target="_blank">WhatsApp Chat</a>
+            <a id="telegram-link" class="link-button" href="#" target="_blank">Telegram Chat</a>
         </div>
         <div class="footer">
-            Cara instan kirim pesan tanpa simpan kontak. <br /><br />
+            Cara instan kirim pesan tanpa simpan kontak.<br /><br />
             Made with ❤️ by <a href="https://instagram.com/JeffYolo" target="_blank">Jeff</a>
         </div>
+    </div>
+    <div id="install-container" style="display:none;">
+        <button id="install-button">
+            <img src="download-icon.png" alt="Download Icon" />
+            Add to Home Screen
+        </button>
     </div>
     <script src="script.js"></script>
 </body>
