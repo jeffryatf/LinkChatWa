@@ -151,6 +151,13 @@ button:hover {
   z-index: 1000;
 }
 
+#badge-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
 #install-button {
   background-color: rgba(128, 128, 128, 0.5);
   color: white;
